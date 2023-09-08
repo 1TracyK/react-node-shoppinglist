@@ -1,3 +1,128 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+body {
+	background: linear-gradient(
+		90deg,
+		rgb(147, 132, 245) 0%,
+		rgba(100, 115, 255, 1) 100%
+	);
+}
+
+h1 {
+	margin: 32px 0;
+	color: #fff;
+	font-size: 24px;
+}
+
+.App-input::placeholder {
+	color: #e2e2e2;
+}
+
+.Add {
+	background-color: rgb(65, 239, 65);
+	font-size: 18px;
+}
+
 .App {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	width: 520px;
+	min-height: 600px;
+	background: rgba(100, 115, 255, 1);
 	text-align: center;
+	margin: 128px auto;
+	border-radius: 10px;
+	padding-bottom: 32px;
+	text-overflow: hidden;
+	cursor: pointer;
+	overflow: auto;
+}
+
+form input,
+form select,
+form textarea,
+form label,
+.form input {
+	font-family: inherit;
+	font-size: 10px;
+	color: inherit;
+	border: none;
+	border-radius: 3%;
+	display: center;
+	width: 30%;
+	padding: 0;
+	margin: 0;
+}
+
+.btn-btn-right {
+	background-color: lightskyblue;
+	border-radius: 3%;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+
+.btn-btn-middle {
+	background-color: red;
+	border-radius: 3%;
+	box-sizing: border-box;
+	font-weight: 700;
+}
+
+.btn-btn-left {
+	background-color: lightblue;
+	border-radius: 3%;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+
+form input,
+form textarea,
+.StripeElement {
+	box-sizing: border-box;
+	border: 2px solid rgba(65, 34, 238, 0.2);
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 0.3rem 1rem;
+	margin-bottom: 1.5rem;
+}
+
+form [type='text'] {
+	width: 30%;
+	justify-content: center;
+}
+
+.quantity {
+	font-size: 10px;
+}
+
+form select {
+	text-transform: none;
+}
+@media (max-width: 916px) {
+	h1 {
+		margin-bottom: 16px;
+	}
+}
+@media (max-width: 700px) {
+	html {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 476px) {
+	html {
+		font-size: 8px;
+	}
 }
