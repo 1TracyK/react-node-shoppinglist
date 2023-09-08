@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-node-shoppinglist/static/css/main.0e5a3e46.css",
+    "main.js": "/react-node-shoppinglist/static/js/main.218768db.js",
+    "index.html": "/react-node-shoppinglist/index.html",
+    "main.0e5a3e46.css.map": "/react-node-shoppinglist/static/css/main.0e5a3e46.css.map",
+    "main.218768db.js.map": "/react-node-shoppinglist/static/js/main.218768db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e5a3e46.css",
+    "static/js/main.218768db.js"
+  ]
+}
