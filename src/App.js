@@ -8,7 +8,6 @@ function App() {
 	const loadData = () => {
 		fetch('https://xp2cjk-8080.csb.app/api/items')
 			.then((x) => x.json())
-
 			.then((response) => {
 				setShoppingList(response);
 			});
@@ -17,18 +16,18 @@ function App() {
 	useEffect(loadData, []);
 
 	const addItem = (item, quantity) => {
-		fetch('https://xp2cjk-8080.csb.app/api/items/new', {
-			method: 'POST',
-			body: JSON.stringify({
-				item,
-				quantity,
-			}),
+		let requestParams = {};
+		requestParams.method = 'POST';
+		requestParams.body = JSON.stringify({ item, quantity });
+		requestParams.headers = {
+			'Content-type': 'application/json; charset=UTF-8',
+			'Access-Control-Allow-Origin': '*',
+		};
+		requestParams.mode = 'cors';
 
-			headers: {
-				'Content-type': 'application/json; charset=UTF-8',
-			},
-			mode: 'cors',
-		}).then(loadData);
+		fetch('https://xp2cjk-8080.csb.app/api/items/new', requestParams).then(
+			loadData,
+		);
 	};
 
 	function deleteItem(id) {
@@ -36,6 +35,7 @@ function App() {
 			method: 'DELETE',
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
+				'Access-Control-Allow-Origin': '*',
 			},
 			mode: 'cors',
 		}).then(loadData);
@@ -50,7 +50,7 @@ function App() {
 			}),
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
-				'Access-Control-Alow-Origin': '*',
+				'Access-Control-Allow-Origin': '*',
 			},
 			mode: 'cors',
 		}).then(loadData);
@@ -63,13 +63,11 @@ function App() {
 			</header>
 			<main>
 				<ShoppingForm
-					className="additem"
 					addItem={addItem}
 					mode="Add"
 				/>
 
 				<ShoppingList
-					className="deleteitem"
 					shoppingList={shoppingList}
 					deleteItem={deleteItem}
 					updateItem={updateItem}

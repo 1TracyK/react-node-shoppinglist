@@ -46,9 +46,8 @@ h1 {
 	margin: 128px auto;
 	border-radius: 10px;
 	padding-bottom: 32px;
-	text-overflow: hidden;
+	overflow: 30px;
 	cursor: pointer;
-	overflow: auto;
 }
 
 form input,
@@ -69,23 +68,29 @@ form label,
 
 .btn-btn-right {
 	background-color: lightskyblue;
-	border-radius: 3%;
+	border-radius: 15%;
 	box-sizing: border-box;
 	font-weight: 600;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .btn-btn-middle {
-	background-color: red;
-	border-radius: 3%;
+	background-color: lightskyblue;
+	border-radius: 15%;
 	box-sizing: border-box;
-	font-weight: 700;
+	font-weight: 600;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 .btn-btn-left {
-	background-color: lightblue;
-	border-radius: 3%;
+	background-color: lightskyblue;
+	border-radius: 15%;
 	box-sizing: border-box;
 	font-weight: 600;
+	margin-right: 4px;
+	margin-left: 4px;
 }
 
 form input,

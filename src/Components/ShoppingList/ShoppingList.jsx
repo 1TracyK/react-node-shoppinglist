@@ -4,11 +4,13 @@ import ShoppingForm from '../ShoppingForm/ShoppingForm';
 function ShoppingItem(props) {
 	const [isEditable, setEditable] = useState(false);
 
-	function deleteClicked() {
+	function deleteClicked(e) {
+		e.preventDefault();
 		props.deleteItem(props.id);
 	}
 
-	function updateClicked() {
+	function updateClicked(e) {
+		e.preventDefault();
 		setEditable((oldValue) => !oldValue);
 	}
 
@@ -32,23 +34,25 @@ function ShoppingItem(props) {
 	}
 
 	return (
-		<form className="list-item">
-			<div>
-				{content}
-				<button className="btn-btn-left">ITEM</button>
-				<button
-					onClick={deleteClicked}
-					className="btn-btn-middle">
-					DELETE
-				</button>
+		<li>
+			<div className="list-item">
+				<div>
+					{content}
+					<button className="btn-btn-left">ITEM</button>
+					<button
+						onClick={deleteClicked}
+						className="btn-btn-middle">
+						DELETE
+					</button>
 
-				<button
-					onClick={updateClicked}
-					className="btn-btn-right">
-					{isEditable ? 'CANCEL' : 'EDIT'}
-				</button>
+					<button
+						onClick={updateClicked}
+						className="btn-btn-right">
+						{isEditable ? 'CANCEL' : 'EDIT'}
+					</button>
+				</div>
 			</div>
-		</form>
+		</li>
 	);
 }
 
