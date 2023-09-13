@@ -17,6 +17,8 @@ HTML
 CSS
 Express
 Sandbox
+Cors
+Boostrap
 
 # Improvements over time:
 
