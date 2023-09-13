@@ -45,6 +45,7 @@ export default function ShoppingForm({
 				value={item}
 				onChange={handleItemChange}
 				required
+				maxLength="20"
 			/>
 			<label htmlFor="quantity"></label>
 			<input
@@ -56,6 +57,7 @@ export default function ShoppingForm({
 				value={num}
 				onChange={handleQuantityChange}
 				required
+				max={1000}
 			/>
 			<button
 				className="Add"
