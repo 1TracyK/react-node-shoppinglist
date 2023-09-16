@@ -57,7 +57,8 @@ export default function ShoppingForm({
 				value={num}
 				onChange={handleQuantityChange}
 				required
-				max={1000}
+				//max={1000}
+				maxchar="5"
 			/>
 			<button
 				className="Add"

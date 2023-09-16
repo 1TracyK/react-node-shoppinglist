@@ -14,6 +14,11 @@ function ShoppingItem(props) {
 		setEditable((oldValue) => !oldValue);
 	}
 
+	function updateHandler(id, item, num) {
+		props.updateItem(id, item, num);
+		setEditable(false);
+	}
+
 	let content = (
 		<>
 			{props.item} ({props.quantity})
@@ -21,14 +26,13 @@ function ShoppingItem(props) {
 	);
 
 	if (isEditable) {
-		// eslint-disable-next-line no-unused-vars
 		content = (
 			<ShoppingForm
 				mode="Update"
 				updatedId={props.id}
 				itemDefault={props.item}
 				quantityDefault={props.quantity}
-				updateItem={props.updateItem}
+				updateItem={updateHandler}
 			/>
 		);
 	}
@@ -36,20 +40,21 @@ function ShoppingItem(props) {
 	return (
 		<li>
 			<div className="list-item">
-				<div>
-					{content}
-					<button className="btn-btn-left">ITEM</button>
-					<button
-						onClick={deleteClicked}
-						className="btn-btn-middle">
-						DELETE
-					</button>
+				{content}
+				<div item-container>
+					<div item-buttons>
+						<button
+							onClick={deleteClicked}
+							className="btn-btn-middle">
+							DELETE
+						</button>
 
-					<button
-						onClick={updateClicked}
-						className="btn-btn-right">
-						{isEditable ? 'CANCEL' : 'EDIT'}
-					</button>
+						<button
+							onClick={updateClicked}
+							className="btn-btn-right">
+							{isEditable ? 'CANCEL' : 'EDIT'}
+						</button>
+					</div>
 				</div>
 			</div>
 		</li>

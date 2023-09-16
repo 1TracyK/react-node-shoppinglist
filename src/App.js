@@ -25,12 +25,24 @@ function App() {
 		};
 		requestParams.mode = 'cors';
 
+		setShoppingList((oldShoppingList) => [
+			...oldShoppingList,
+			{
+				id: new Date().getTime(),
+				item: item + quantity,
+			},
+		]);
+
 		fetch('https://xp2cjk-8080.csb.app/api/items/new', requestParams).then(
 			loadData,
 		);
 	};
 
 	function deleteItem(id) {
+		setShoppingList((oldShoppingList) =>
+			oldShoppingList.filter((value) => value.id !== id),
+		);
+
 		fetch('https://xp2cjk-8080.csb.app/api/items/' + id, {
 			method: 'DELETE',
 			headers: {
@@ -61,7 +73,7 @@ function App() {
 			<header className="App-header">
 				<h1>Shopping List</h1>
 			</header>
-			<main>
+			<main className="list-style">
 				<ShoppingForm
 					addItem={addItem}
 					mode="Add"

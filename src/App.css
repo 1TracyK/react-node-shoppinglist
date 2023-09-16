@@ -37,6 +37,44 @@ h1 {
 	font-size: 18px;
 }
 
+.list-item {
+	padding: 0.5rem;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+	margin: 0.75rem;
+	background-color: rgb(166, 156, 232);
+	box-shadow: 2px;
+	margin-left: 2.5rem;
+	margin-right: 2.5rem;
+	padding-inline-start: 0;
+	list-style: none;
+	justify-content: space-between;
+}
+
+.item-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+	border: 2px solid black;
+	box-shadow: 2px 2px 6px rgba(210, 210, 250, 255, 0.5);
+}
+
+.item-buttons {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	text-align: left;
+	margin-left: 2rem;
+}
+
+li:hover {
+	padding: 0.5rem;
+	box-shadow: 2px 2px 6px rgba(210, 210, 250, 255, 0.8);
+	background-color: transparent;
+	border-radius: 0.5rem;
+	margin: 0.5rem;
+}
+
 .App {
 	display: flex;
 	flex-direction: column;
@@ -80,14 +118,6 @@ form label,
 }
 
 .btn-btn-middle {
-	background-color: lightskyblue;
-	border-radius: 15%;
-	box-sizing: border-box;
-	font-weight: 600;
-	margin-left: 2px;
-}
-
-.btn-btn-left {
 	background-color: lightskyblue;
 	border-radius: 15%;
 	box-sizing: border-box;
