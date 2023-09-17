@@ -92,6 +92,7 @@ li:hover {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	overflow: auto;
+	font-weight: 600;
 }
 
 form input,
