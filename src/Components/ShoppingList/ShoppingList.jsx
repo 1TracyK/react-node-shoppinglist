@@ -38,23 +38,21 @@ function ShoppingItem(props) {
 	}
 
 	return (
-		<li>
-			<div className="list-item">
-				{content}
-				<div item-container>
-					<div item-buttons>
-						<button
-							onClick={deleteClicked}
-							className="btn-btn-middle">
-							DELETE
-						</button>
+		<li className="list-item">
+			{content}
+			<div item-container>
+				<div item-buttons>
+					<button
+						onClick={deleteClicked}
+						className="btn-btn-middle">
+						DELETE
+					</button>
 
-						<button
-							onClick={updateClicked}
-							className="btn-btn-right">
-							{isEditable ? 'CANCEL' : 'EDIT'}
-						</button>
-					</div>
+					<button
+						onClick={updateClicked}
+						className="btn-btn-right">
+						{isEditable ? 'CANCEL' : 'EDIT'}
+					</button>
 				</div>
 			</div>
 		</li>
