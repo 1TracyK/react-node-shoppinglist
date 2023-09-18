@@ -92,6 +92,7 @@ h1 {
 	overflow: auto;
 	font-weight: 600;
 }
+
 form input,
 form select,
 form textarea,
@@ -117,14 +118,6 @@ form label,
 }
 
 .btn-btn-middle {
-	background-color: lightskyblue;
-	border-radius: 15%;
-	box-sizing: border-box;
-	font-weight: 600;
-	margin-left: 2px;
-}
-
-.btn-btn-left {
 	background-color: lightskyblue;
 	border-radius: 15%;
 	box-sizing: border-box;
